@@ -1,35 +1,32 @@
-import React, { Component } from "react";
+import React from "react";
+import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
-export class testimonials extends Component {
-  render() {
-    return (
-      <div id="testimonials">
-        <div className="container">
+
+class ImageGallaryComponent extends React.Component {
+    render() {
+        return (
+          <div className="container">
           <div className="section-title text-center">
             <h2>Nossos Clientes</h2>
-          </div>
-          <div className="row">
-            {this.props.data
-              ? this.props.data.map((d, i) => (
-                  <div key={`${d.name}-${i}`} className="col-md-4">
-                    <div className="testimonial">
-                      <div className="testimonial-image">
-                        {" "}
-                        <img src={d.img} alt="" />{" "}
-                      </div>
-                      <div className="testimonial-content">
-                        <p>"{d.text}"</p>
-                        <div className="testimonial-meta"> - {d.name} </div>
-                      </div>
+                <Carousel className="carrosel" autoPlay interval="500" transitionTime="500">
+                    <div>
+                        <img src="https://picsum.photos/700/400?img=1" />
+                        <p className="legend">My Classic Still 1</p>
                     </div>
-                  </div>
-                ))
-              : "loading"}
-          </div>
-        </div>
-      </div>
-    );
-  }
+                    <div>
+                        <img src="https://picsum.photos/700/400?img=2" />
+                        <p className="legend">My Classic Still 2</p>
+                    </div>
+                    <div>
+                        <img src="https://picsum.photos/700/400?img=3" />
+                        <p className="legend">My Classic Still 3</p>
+                    </div>
+                </Carousel>
+            </div>
+            </div>
+        )
+    };
 }
 
-export default testimonials;
+export default ImageGallaryComponent;

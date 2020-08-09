@@ -30,7 +30,8 @@ summary {
 audio,
 canvas,
 progress,
-video {
+video,
+.carousel {
   display: inline-block;
   vertical-align: baseline;
 }
@@ -187,6 +188,25 @@ td,
 th {
   padding: 0;
 }
+
+.carrosel{ max-width: 500px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.carousel{
+  max-width: 500px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
 /*! Source: https://github.com/h5bp/html5-boilerplate/blob/master/src/css/main.css */
 @media print {
   *,
@@ -1608,7 +1628,7 @@ pre code {
   margin-right: auto;
   margin-left: auto;
 }
-.row {
+.carousel {
   margin-right: -15px;
   margin-left: -15px;
 }
